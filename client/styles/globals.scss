@@ -1,0 +1,51 @@
+// Icons & Fonts
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// KaTeX (for remark-math)
+@import url('https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css');
+
+// Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply focus:outline-none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-inter text-sm;
+    @apply bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100;
+  }
+
+  p {
+    @apply leading-normal;
+  }
+
+  a {
+    @apply cursor-pointer font-medium;
+  }
+
+  .markdown {
+    @apply prose prose-sm leading-normal max-w-none prose-ul:p-0 prose-ul:my-0 prose-p:my-0;
+
+    ul li {
+      @apply ml-4 list-outside;
+    }
+
+    .footnotes p {
+      @apply inline;
+    }
+  }
+}
+
+// Partials
+@import 'partials/reset';
+@import 'partials/forms';
+@import 'partials/toast';

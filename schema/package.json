@@ -1,0 +1,15 @@
+{
+  "name": "schema",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "lint": "eslint --fix src",
+    "dev": "tsc -w",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "typescript": "^5.1.3"
+  }
+}
